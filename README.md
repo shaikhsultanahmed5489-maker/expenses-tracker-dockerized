@@ -1,58 +1,144 @@
-![Language](https://img.shields.io/badge/language-Java%20-blue.svg)
-![Technologies](https://img.shields.io/badge/technologies-Spring_boot%20-green.svg)
-![Technologies](https://img.shields.io/badge/technologies-Spring_MVC%20-green.svg)
-![Technologies](https://img.shields.io/badge/technologies-Spring_Security%20-green.svg)
-![Technologies](https://img.shields.io/badge/technologies-Spring_Data_jpa%20-green.svg)
-![Technologies](https://img.shields.io/badge/technologies-Thymeleaf_&_Bootstrap%20-purple.svg)
+# Expenses Tracker Dockerized
 
-# Expenses-Tracker-WebApp
 ## Overview
-The Expenses Tracker App is a robust financial management solution developed using cutting-edge technologies such as Spring Boot, Spring Security, and MySQL. With user authentication and authorization features, users can securely sign up, sign in, and perform CRUD operations on their expenses. The app's intuitive interface, powered by Thymeleaf and Bootstrap, ensures a seamless user experience. The filtering functionality allows users to efficiently organize and analyze their financial data. Explore the power of streamlined expense tracking and financial control with this feature-rich application.<br> (Screenshots below for more illustration)
 
-## Technologies Used
-- Java
-- Spring boot
-- Spring MVC
-- Spring Security
-- Spring Data (JPA)
-- MySQL
-- Thymeleaf
-- Bootstrap
+This repository contains a Dockerized version of an open-source Spring Boot Expenses Tracker application.
 
-## Features
-- **User Authentication and Authorization:** Securely sign up, sign in, and access the app with built-in authentication and authorization.
-- **CRUD Operations:** Perform essential financial tracking actions such as adding, reading, updating, and deleting expenses.
-- **Filtering:** Utilize the filtering feature to efficiently sort and view expenses based on various criteria.
+The focus of this project is on containerization, orchestration, and deployment using Docker, Docker Compose, and AWS EC2.
 
-## Getting Started
-1. **Clone the Repository:**
-`git clone https://github.com/your-username/expenses-tracker.git`
+## My Contributions
 
-2. **Configure Database:**
-Set up MySQL database and update the application.properties file with your database configuration.
+* Created a multi-stage Dockerfile for the Spring Boot application
+* Created Docker Compose configuration
+* Configured MySQL and Spring Boot containers
+* Implemented persistent storage using Docker volumes
+* Configured container networking
+* Built and tested Docker images
+* Deployed and verified the application on AWS EC2
 
-3. **Build and Run:**
-Build the project using your preferred IDE or with Maven:
-`mvn clean install`.
+## Tech Stack
 
-4. **Run the application:**
-`java -jar target/expenses-tracker.jar`.
+* Java 17
+* Spring Boot
+* MySQL
+* Maven
+* Docker
+* Docker Compose
+* AWS EC2
+* Ubuntu Linux
 
-5. **Access the App:**
-Open your web browser and navigate to `http://localhost:8080`.
+## Project Structure
 
-## ScreenShots
-![Example Image](screenshots/1.png) <br>
-![Example Image](screenshots/2-2.png) <br>
-![Example Image](screenshots/3-3.png) <br>
-![Example Image](screenshots/4-4.png) <br>
-![Example Image](screenshots/5-5.png) <br>
-![Example Image](screenshots/6-6.png) <br>
-![Example Image](screenshots/7.png) <br>
-![Example Image](screenshots/8.png) <br>
+```text
+.
+├── Dockerfile
+├── docker-compose.yml
+├── pom.xml
+├── src/
+├── screenshots/
+└── README.md
+```
 
-## Contributions
-Contributions are welcome! If you find a bug or have suggestions for improvement, feel free to open an issue or create a pull request.
+## Docker Build
 
-## License
-This project is licensed under the MIT License.
+Build the Docker image:
+
+```bash
+docker build -t expensesapp .
+```
+
+Verify the image:
+
+```bash
+docker images
+```
+
+## Running with Docker Compose
+
+Start the application:
+
+```bash
+docker compose up -d
+```
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+Stop the application:
+
+```bash
+docker compose down
+```
+
+## AWS EC2 Deployment
+
+### EC2 Configuration
+
+* Launch Ubuntu EC2 instance
+* Install Docker
+* Install Docker Compose
+* Clone the repository
+* Build and run containers
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd expenses-tracker-dockerized
+```
+
+### Deploy Application
+
+```bash
+docker compose up -d
+```
+
+### Verify Deployment
+
+```bash
+docker ps
+```
+
+Application will be available at:
+
+```text
+http://<EC2-PUBLIC-IP>:8080
+```
+
+## Screenshots
+
+### Application Running on AWS EC2
+
+(screenshots/application-homepage.png)
+
+### Running Containers
+
+(screenshots/docker-ps.png)
+
+### AWS EC2 Instance
+
+(screenshots/ec2-instance.png)
+
+## Learning Outcomes
+
+Through this project I gained hands-on experience with:
+
+* Docker Image Creation
+* Multi-Stage Docker Builds
+* Docker Compose
+* Container Networking
+* Volume Management
+* Spring Boot Containerization
+* MySQL Containerization
+* AWS EC2 Deployment
+* Linux Administration
+* Troubleshooting Containerized Applications
+
+## Disclaimer
+
+The original Expenses Tracker application was developed by its original author(s).
+
+This repository focuses on Dockerization, container orchestration, and AWS deployment for DevOps learning and practice purposes.
