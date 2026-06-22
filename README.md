@@ -43,15 +43,18 @@ http://<EC2-PUBLIC-IP>:8080
 
 ### Application Running
 
-(screenshots/application-homepage.png)
+(screenshots/application-homepage.png)<img width="1912" height="1020" alt="application-homepage" src="https://github.com/user-attachments/assets/6712aa35-35c4-4530-bc28-294791e5b95b" />
+
 
 ### Docker Containers
 
-(screenshots/docker-ps.png)
+(screenshots/docker-ps.png)<img width="1919" height="160" alt="docker-ps" src="https://github.com/user-attachments/assets/192ace1a-b06b-4b85-87b0-c95f9d02045a" />
+
 
 ### AWS EC2 Deployment
 
-(screenshots/ec2.png)
+(screenshots/ec2.png)<img width="1918" height="1019" alt="ec2-instance" src="https://github.com/user-attachments/assets/d0585f5e-5f65-492a-870c-4cac0939695e" />
+
 
 ## Note
 
