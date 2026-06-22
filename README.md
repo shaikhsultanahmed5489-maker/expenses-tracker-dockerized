@@ -1,61 +1,27 @@
 # Expenses Tracker Dockerized
 
-## Overview
-
-This repository contains a Dockerized version of an open-source Spring Boot Expenses Tracker application.
-
-The focus of this project is on containerization, orchestration, and deployment using Docker, Docker Compose, and AWS EC2.
+A Docker practice project where an open-source Spring Boot + MySQL Expenses Tracker application was containerized using Docker and Docker Compose, and deployed on AWS EC2.
 
 ## My Contributions
 
-* Created a multi-stage Dockerfile for the Spring Boot application
+* Created a multi-stage Dockerfile
 * Created Docker Compose configuration
-* Configured MySQL and Spring Boot containers
-* Implemented persistent storage using Docker volumes
-* Configured container networking
-* Built and tested Docker images
-* Deployed and verified the application on AWS EC2
+* Containerized Spring Boot and MySQL services
+* Configured Docker networking and volumes
+* Deployed and tested the application on AWS EC2
 
 ## Tech Stack
 
-* Java 17
 * Spring Boot
 * MySQL
-* Maven
 * Docker
 * Docker Compose
 * AWS EC2
 * Ubuntu Linux
 
-## Project Structure
+## Run the Application
 
-```text
-.
-├── Dockerfile
-├── docker-compose.yml
-├── pom.xml
-├── src/
-├── screenshots/
-└── README.md
-```
-
-## Docker Build
-
-Build the Docker image:
-
-```bash
-docker build -t expensesapp .
-```
-
-Verify the image:
-
-```bash
-docker images
-```
-
-## Running with Docker Compose
-
-Start the application:
+Build and start the containers:
 
 ```bash
 docker compose up -d
@@ -67,42 +33,7 @@ Check running containers:
 docker ps
 ```
 
-Stop the application:
-
-```bash
-docker compose down
-```
-
-## AWS EC2 Deployment
-
-### EC2 Configuration
-
-* Launch Ubuntu EC2 instance
-* Install Docker
-* Install Docker Compose
-* Clone the repository
-* Build and run containers
-
-### Clone Repository
-
-```bash
-git clone <repository-url>
-cd expenses-tracker-dockerized
-```
-
-### Deploy Application
-
-```bash
-docker compose up -d
-```
-
-### Verify Deployment
-
-```bash
-docker ps
-```
-
-Application will be available at:
+Access the application:
 
 ```text
 http://<EC2-PUBLIC-IP>:8080
@@ -110,35 +41,18 @@ http://<EC2-PUBLIC-IP>:8080
 
 ## Screenshots
 
-### Application Running on AWS EC2
+### Application Running
 
 (screenshots/application-homepage.png)
 
-### Running Containers
+### Docker Containers
 
 (screenshots/docker-ps.png)
 
-### AWS EC2 Instance
+### AWS EC2 Deployment
 
-(screenshots/ec2-instance.png)
+(screenshots/ec2.png)
 
-## Learning Outcomes
+## Note
 
-Through this project I gained hands-on experience with:
-
-* Docker Image Creation
-* Multi-Stage Docker Builds
-* Docker Compose
-* Container Networking
-* Volume Management
-* Spring Boot Containerization
-* MySQL Containerization
-* AWS EC2 Deployment
-* Linux Administration
-* Troubleshooting Containerized Applications
-
-## Disclaimer
-
-The original Expenses Tracker application was developed by its original author(s).
-
-This repository focuses on Dockerization, container orchestration, and AWS deployment for DevOps learning and practice purposes.
+The original Expenses Tracker application was developed by its original author(https://github.com/mohamed0sawy/Expenses-Tracker-WebApp.git). This repository focuses on Dockerization and AWS deployment for DevOps learning and practice.
